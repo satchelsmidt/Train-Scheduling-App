@@ -12,7 +12,6 @@ $(document).ready(function () {
 
     firebase.initializeApp(firebaseConfig);
 
-
     // - - - - - - - - - - - - - - - - - - - - - - -  // 
 
     var database = firebase.database();
@@ -57,31 +56,12 @@ $(document).ready(function () {
         //Minutes Away
         newRow.append($('<td>').html(minutesTillTrain))
 
-
         // console.log("CURRENT TIME", currentTime)
         console.log("FIRST TRAIN TIME", firstTrain)
         console.log("REMAINDER", tRemainder)
         console.log("MINUTES TILL NEXT TRAIN", minutesTillTrain)
         console.log("NEXT ARRIVAL TIME", nextArrivalTime)
         console.log("DIFF TIME", diffTime)
-
-        // console.log("DIFFERENCE", moment().subtract(firstTrain).format("HH:mm"))
-
-        // let firstTrainTime = firstTrain.format("HH:mm")
-        // console.log("FIRST", firstTrainTime)    
-
-
-
-        // console.log("DIFF:", currentTime.diff(firstTrainTime, "minutes"))
-
-        // let nextArrival = currentTime - (snapshot.val().trainStartTime)
-
-        // console.log(nextArrival)
-
-        // newRow.append($('<td>').html(nextArrival))
-
-        // Total Billed (IGNORE THIS)
-        // newRow.append($('<td>').html(snapshot.val().rate * totalMonths))
 
         $('#table-body').append(newRow)
     });
